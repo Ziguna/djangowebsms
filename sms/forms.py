@@ -1,7 +1,5 @@
 from django import forms
-import csv
-from sms.models import Message,Group,File
-
+from sms.models import Message, Group, File
 
 
 class MessageSendForm(forms.ModelForm):
@@ -10,7 +8,7 @@ class MessageSendForm(forms.ModelForm):
 
 	def clean(self):
 	
-		numbers = self.cleaned_data['receiver']
+		numbers = self.data.get('receiver')
 		msg = self.cleaned_data['message']
 		number_list = numbers.split(',')
 		if ',' in numbers:			

@@ -1,12 +1,9 @@
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import ListView, DetailView, TemplateView, FormView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-# import tablib
-
 from django import forms
 from django.views.generic.edit import FormMixin
 from django.contrib.messages.views import SuccessMessageMixin
-
 from sms.models import Message, Group, File
 from sms.forms import MessageSendForm , GroupForm,FileForm
 # Create your views here.
