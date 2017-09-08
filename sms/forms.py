@@ -1,4 +1,5 @@
 from django import forms
+import re
 from sms.models import Message, Group, File
 
 
@@ -11,7 +12,9 @@ class MessageSendForm(forms.ModelForm):
 		numbers = self.data.get('receiver')
 		msg = self.cleaned_data['message']
 		number_list = numbers.split(',')
-		if ',' in numbers:			
+		pattern = re.compile("^([9]\d{9},)*[9]\d{9}$")
+
+		if pattern.match(numbers):			
 		 	for num in number_list:
 		 		msg_obj = Message(message=msg, receiver=num)
 		 		msg_obj.save()
