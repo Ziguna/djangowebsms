@@ -29,14 +29,41 @@
                 <div class="col-md-12" style="padding-top: 10px;">
                     <center>
 
-                    <a href = "{% url 'sms:main_page' %}"><button  class = "btn btn-outline-dark" type="button">SMS</button></a>
+                    
+  <a class="btn btn-outline-dark" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    MENU
 
+  </a>
+<div class="collapse" id="collapseExample">
+  
+
+                <div class="">
+
+                    <a href = "{% url 'sms:main_page' %}"><button  class = "btn btn-outline-dark" type="button">SMS</button></a><br>
+                  </div>
+
+                  <div class="">
 
                     <a href = "{% url 'sms:group_show_page' %}"><button  class = "btn btn-outline-dark" type="button">GROUP SMS</button></a>
 
+                    </div>
+
+                    <div class="">
+
                     <a href = "{% url 'sms:sent_page' %}"><button  class = "btn btn-outline-dark" type="button">SENT SMS</button></a>
 
+                    </div>
+
+                    <div class="">
+
                     <a href = "{% url 'sms:file_page' %}"><button  class = "btn btn-outline-dark" type="button">Upload File </button></a>
+
+                    </div>
+    </div>
+  </div>
+</div>
+
+                    
                     </center>
          
                 {% block content %}
