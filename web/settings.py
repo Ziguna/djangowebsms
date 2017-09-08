@@ -40,7 +40,7 @@ CONTENT_TYPES = ['text']
 # 500MB - 429916160
 MAX_UPLOAD_SIZE = 23
 
-
+LOGIN_REDIRECT_URL = '/'
 
 # Application definition
 
@@ -69,7 +69,7 @@ ROOT_URLCONF = 'web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'sms/templates/sms')],
+        'DIRS': ['./templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
